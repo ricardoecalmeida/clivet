@@ -1,0 +1,131 @@
+.menu-grid {
+  margin-top: 4rem;
+}
+
+/* Desktop View */
+.desktop-view .grouped-view {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.desktop-group {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.desktop-title-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--fadedcolor);
+  color: var(--maincolor);
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  i {
+    font-size: 1.3rem;
+  }
+}
+
+.desktop-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-action-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--maincolor);
+  background-color: white;
+  border-left: 2px solid var(--fadedcolor);
+  border-right: 2px solid var(--fadedcolor);
+  border-bottom: 2px solid var(--fadedcolor);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--fadedcolor);
+  }
+
+  i {
+    font-size: 1.1rem;
+    width: 16px;
+    text-align: center;
+  }
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+/* Mobile View */
+.mobile-view {
+  display: none;
+}
+
+.mobile-group {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-title-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--fadedcolor);
+  color: var(--maincolor);
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.mobile-action-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--maincolor);
+  background-color: white;
+  border-left: 2px solid var(--fadedcolor);
+  border-right: 2px solid var(--fadedcolor);
+  border-bottom: 2px solid var(--fadedcolor);
+
+  &:hover {
+    background-color: var(--fadedcolor);
+  }
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+
+  i {
+    font-size: 1rem;
+  }
+}
+
+/* Responsivity */
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-view {
+    display: none !important;
+  }
+}

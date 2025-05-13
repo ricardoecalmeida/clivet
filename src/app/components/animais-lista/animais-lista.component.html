@@ -1,0 +1,49 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Espécie</th>
+        <th scope="col">Raça</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">Data de nascimento</th>
+        <th scope="col">Tutor</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (animal of animais; track animal.id) {
+      <tr>
+        <td style="width: 15%;">{{ animal.nome }}</td>
+        <td style="width: 15%;">{{ animal.especie }}</td>
+        <td style="width: 15%;">{{ animal.raca }}</td>
+        <td style="width: 5%;">{{ animal.sexo }}</td>
+        <td style="width: 15%;">{{ animal.dataNascimento }}</td>
+        <td style="width: 15%;">{{ tutorIdNome(animal.tutorId)}}</td>
+        <td style="width: 5%;">
+          <button class="btn btn-lg edit-btn square-btn" type="button" [routerLink]="['/editar-animal/', animal.id]">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+        </td>
+        <td style="width: 5%;">
+          <button class="btn btn-lg delete-btn square-btn" type="button"
+            [routerLink]="['/eliminar-animal/', animal.id]">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+      } @empty {
+      @if (animais) {
+      <tr>
+        <td colspan="4">Não há animais!</td>
+      </tr>
+      } @else {
+      <tr>
+        <td colspan="4">A carregar os animais...</td>
+      </tr>
+      }
+      }
+    </tbody>
+  </table>
+</div>

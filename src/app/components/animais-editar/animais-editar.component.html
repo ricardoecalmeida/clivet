@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<div class="container page-title">
+  <h2>Editar dados do animal</h2>
+
+  <form [formGroup]="formularioAnimais" (ngSubmit)="handleSubmit()">
+    <br>
+    <div class="mb-4">
+      <label class="form-label" for="nome">Nome:</label>
+      <input class="form-control" formControlName="nome" type="text" id="nome" />
+      @if ((submitted || formularioAnimais.controls['nome'].touched) && formularioAnimais.controls['nome'].errors) {
+      <div>
+        @if (formularioAnimais.controls['nome'].errors['required']) {
+        <span>Insira o nome</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="especie">Espécie:</label>
+      <input class="form-control" formControlName="especie" type="text" id="especie" />
+      @if ((submitted || formularioAnimais.controls['especie'].touched) && formularioAnimais.controls['especie'].errors)
+      {
+      <div>
+        @if (formularioAnimais.controls['especie'].errors['required']) {
+        <span>Insira a espécie</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="raca">Raça:</label>
+      <input class="form-control" formControlName="raca" type="text" id="raca" />
+      @if ((submitted || formularioAnimais.controls['raca'].touched) && formularioAnimais.controls['raca'].errors) {
+      <div>
+        @if (formularioAnimais.controls['raca'].errors['required']) {
+        <span>Insira a raça</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="sexo">Sexo:</label>
+      <input class="form-control" formControlName="sexo" type="text" id="sexo" />
+      @if ((submitted || formularioAnimais.controls['sexo'].touched) && formularioAnimais.controls['sexo'].errors) {
+      <div>
+        @if (formularioAnimais.controls['sexo'].errors['required']) {
+        <span>Insira o sexo</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="dataNascimento">Data de nascimento:</label>
+      <input class="form-control" formControlName="dataNascimento" type="datetime-local" id="dataNascimento" />
+      @if ((submitted || formularioAnimais.controls['dataNascimento'].touched) &&
+      formularioAnimais.controls['dataNascimento'].errors) {
+      <div>
+        @if (formularioAnimais.controls['dataNascimento'].errors['required']) {
+        <span>Insira a data de nascimento</span>
+        }
+      </div>
+      }
+    </div>
+    <div>
+      <label for="tutorId">ID Tutor:</label>
+      <input class="form-control" formControlName="tutorId" type="text" id="tutorId" />
+      @if ((submitted || formularioAnimais.controls['tutorId'].touched) && formularioAnimais.controls['tutorId'].errors)
+      {
+      <div>
+        @if (formularioAnimais.controls['tutorId'].errors['required']) {
+        <span>Insira o ID do tutor</span>
+        }
+      </div>
+      }
+    </div>
+    <br>
+    <div class="float-start">
+      <button class="btn btn-outline-secondary" type="button" (click)="voltar()"><i class="fa-solid fa-circle-chevron-left"></i>
+        Voltar</button>
+    </div>
+    <div class="float-end">
+      <button class="btn btn-outline-success" type="submit"
+        [disabled]="submitted && formularioAnimais.invalid"><i class="fa-solid fa-circle-check"></i> Actualizar</button>
+    </div>
+  </form>
+</div>

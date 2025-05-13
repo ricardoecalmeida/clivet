@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark fixed-top navbar-expand-md">
+  <div class="container-fluid px-5">
+    <div class="ps-3">
+      <a class="nav-link" [routerLink]="['']" (click)="closeMenu()">
+        <img src="assets/images/logo.svg" class="logo-img">
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+  <div class="animated-toggler" [class.open]="!isMenuCollapsed">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</button>
+
+<div class="collapse navbar-collapse" [class.show]="!isMenuCollapsed">
+      <ul class="navbar-nav w-100 m-0">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['']" (click)="closeMenu()"><i class="fa-solid fa-house fa-lg"></i><br>Home</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/marcacoes']" (click)="closeMenu()"><i class="fa-solid fa-calendar fa-lg"></i><br>Marcações</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/animais']" (click)="closeMenu()"><i class="fa-solid fa-dog fa-lg"></i><br>Animais</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/tutores']" (click)="closeMenu()"><i class="fa-solid fa-user fa-lg"></i><br>Tutores</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

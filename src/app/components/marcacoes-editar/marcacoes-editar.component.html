@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="container page-title">
+  <h2>Editar dados da marcação</h2>
+
+  <form [formGroup]="formularioMarcacao" (ngSubmit)="handleSubmit()">
+    <br>
+    <div class="mb-4">
+      <label class="form-label" for="tipo">Tipo:</label>
+      <input class="form-control" formControlName="tipo" type="text" id="tipo" />
+      @if ((submitted || formularioMarcacao.controls['tipo'].touched) && formularioMarcacao.controls['tipo'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['tipo'].errors['required']) {
+        <span>Insira o tipo</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="animalId">ID Animal:</label>
+      <input class="form-control" formControlName="animalId" type="text" id="animalId" />
+      @if ((submitted || formularioMarcacao.controls['animalId'].touched) &&
+      formularioMarcacao.controls['animalId'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['animalId'].errors['required']) {
+        <span>Insira o ID do animal</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="tutorId">ID Tutor:</label>
+      <input class="form-control" formControlName="tutorId" type="text" id="tutorId" />
+      @if ((submitted || formularioMarcacao.controls['tutorId'].touched) &&
+      formularioMarcacao.controls['tutorId'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['tutorId'].errors['required']) {
+        <span>Insira o ID do tutor</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="dataHora">Data e hora:</label>
+      <input class="form-control" formControlName="dataHora" type="datetime-local" id="dataHora" />
+      @if ((submitted || formularioMarcacao.controls['dataHora'].touched) &&
+      formularioMarcacao.controls['dataHora'].errors) {
+      <div>
+        @if (formularioMarcacao.controls['dataHora'].errors['required']) {
+        <span>Insira a data e hora</span>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-4">
+      <input class="form-check-input" formControlName="realizada" type="checkbox" id="realizada" />
+      <label class="form-check-label" for="realizada">&nbsp;Realizada</label>
+    </div>
+    <div class="mb-4">
+      <input class="form-check-input" formControlName="cancelada" type="checkbox" id="cancelada" />
+      <label class="form-check-label" for="cancelada">&nbsp;Cancelada</label>
+    </div>
+    <div class="float-start">
+      <button class="btn btn-outline-secondary" type="button" (click)="voltar()"><i
+          class="fa-solid fa-circle-chevron-left"></i>
+        Voltar</button>
+    </div>
+    <div class="float-end">
+      <button class="btn btn-outline-success" type="submit" [disabled]="submitted && formularioMarcacao.invalid"><i
+          class="fa-solid fa-circle-check"></i> Actualizar</button>
+    </div>
+  </form>
+</div>

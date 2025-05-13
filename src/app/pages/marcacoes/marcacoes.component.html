@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="page-title" id="marcacoes">
+    <h2>
+      <i class="fa-solid fa-calendar"></i>
+      &nbsp;Marcações
+    </h2>
+  </div>
+
+  <div>
+    <app-marcacoes-lista />
+  </div>
+
+  <div class="text-center">
+    <button class="btn btn-outline-secondary btn-lg button-add" [routerLink]="['/nova-marcacao']" type="button">
+      <i class="fa-solid fa-circle-plus fa-lg"></i>
+      &nbsp;Nova marcação
+    </button>
+  </div>
+</div>

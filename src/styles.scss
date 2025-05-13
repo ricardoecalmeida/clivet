@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/* ========== VARIABLES ========== */
+:root {
+  --maincolor: #586F7C;
+  --fadedcolor: #DDE2E4;
+  --delete-red: #C70039;
+  --edit-yellow: #FFC300;
+  --maincolor-rgb: 88, 111, 124;
+  --bs-body-font-family: 'Titillium Web', sans-serif;
+}
+
+/* ========== FONT ========== */
+* {
+  font-family: Titillium Web;
+}
+
+body {
+  padding-top: 8vh;
+}
+
+/* ========== CONTAINER ========== */
+.container-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ========== TEXT ========== */
+
+p {
+  color: var(--maincolor);
+}
+
+.page-title {
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--maincolor)!important;
+}
+
+h2 {
+  display: inline-block;
+  border: 3px solid var(--maincolor);
+  box-shadow: 4px 6px 0px var(--maincolor);
+  padding: 8px 24px;
+  font-size: 1.25rem!important;
+  font-weight: 600!important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+/* ========== HOME ========== */
+
+.illustration {
+  margin-top: 4rem;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.home-text {
+  padding-top: 4rem;
+  line-height: 1.75rem;
+}
+
+/* ========== TABLES ========== */
+table {
+  overflow-x: scroll;
+  width: 100%;
+  text-align: center;
+}
+
+th {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 9pt;
+}
+
+td {
+  font-size: 10pt;
+  vertical-align: middle;
+}
+
+li {
+  text-align: center;
+}
+
+/* Buttons */
+
+.edit-btn {
+  color: var(--edit-yellow)!important;
+}
+
+.delete-btn {
+  color: var(--delete-red)!important;
+}
+
+.square-btn :hover {
+  scale: 150%;
+  transition: scale 0.3s ease-out;
+}
+
+.button-add {
+  margin: 2rem;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  font-size: 8pt;
+}

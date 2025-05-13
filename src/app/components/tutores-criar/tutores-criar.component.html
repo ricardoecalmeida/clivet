@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="container page-title">
+  <h2>
+    <i class="fa-solid fa-plus-circle"></i>
+    Adicionar tutor
+  </h2>
+
+    <form [formGroup]="formularioTutores" (ngSubmit)="handleSubmit()">
+      <br>
+      <div class="mb-4">
+        <label class="form-label" for="nome">Nome:</label>
+        <input class="form-control" formControlName="nome" type="text" id="nome" />
+        @if ((submitted || formularioTutores.controls['nome'].touched) && formularioTutores.controls['nome'].errors) {
+        <div>
+          @if (formularioTutores.controls['nome'].errors['required']) {
+          <span>Insira o nome</span>
+          }
+        </div>
+        }
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="telemovel">Telemóvel:</label>
+        <input class="form-control" formControlName="telemovel" type="text" id="telemovel" />
+        @if ((submitted || formularioTutores.controls['telemovel'].touched) && formularioTutores.controls['telemovel'].errors) {
+        <div>
+          @if (formularioTutores.controls['telemovel'].errors['required']) {
+          <span>Insira o telemóvel</span>
+          }
+        </div>
+        }
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="email">E-mail:</label>
+        <input class="form-control" formControlName="email" type="email" id="email" />
+        @if ((submitted || formularioTutores.controls['email'].touched) && formularioTutores.controls['email'].errors) {
+        <div>
+          @if (formularioTutores.controls['email'].errors['required']) {
+          <span>Insira o e-mail</span>
+          }
+        </div>
+        }
+      </div>
+      <br>
+      <div class="float-start">
+        <button class="btn btn-outline-secondary" type="button" (click)="voltar()"><i
+            class="fa-solid fa-circle-chevron-left"></i>
+          Voltar</button>
+      </div>
+      <div class="float-end">
+        <button class="btn btn-outline-success" type="submit" [disabled]="submitted && formularioTutores.invalid"><i
+            class="fa-solid fa-circle-plus"></i> Adicionar</button>
+      </div>
+    </form>
+  </div>

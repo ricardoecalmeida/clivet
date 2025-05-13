@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container page-title">
+  <h2>Eliminar marcação</h2>
+  <div class="container-center">
+    <br>
+    <p>Deseja eliminar a marcação <b>{{ this.marcacao?.tipo }}</b>?</p>
+    <div class="float-start">
+      <button class="btn btn-outline-secondary" type="button" (click)="cancelar()"><i class="fa-solid fa-circle-chevron-left"></i> Cancelar</button>
+    </div>
+    <div class="float-end">
+      <button class="btn btn-outline-danger" type="button" (click)="confirmar()"><i class="fa-solid fa-trash"></i> Eliminar</button>
+    </div>
+  </div>
+</div>

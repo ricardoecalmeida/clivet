@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="page-title" id="animais">
+    <h2><i class="fa-solid fa-dog"></i> Animais</h2>
+  </div>
+
+  <div>
+    <app-animais-lista />
+  </div>
+
+  <div class="text-center">
+    <button class="btn btn-outline-secondary btn-lg button-add" [routerLink]="['/novo-animal']" type="button">
+      <i class="fa-solid fa-circle-plus fa-lg"></i>
+      &nbsp;Novo animal
+    </button>
+  </div>
+</div>

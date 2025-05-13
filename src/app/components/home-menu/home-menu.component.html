@@ -1,0 +1,103 @@
+<div class="desktop-view">
+  <div class="container menu-grid grouped-view">
+
+    <div class="desktop-group">
+      <div class="desktop-title-item">
+        <i class="fa-solid fa-calendar"></i>
+        <span>Marcações</span>
+      </div>
+      <div class="desktop-actions">
+        <a class="desktop-action-item" [routerLink]="['/marcacoes']">
+          <i class="fa-solid fa-list"></i>
+          <span>Listar marcações</span>
+        </a>
+        <a class="desktop-action-item" [routerLink]="['/nova-marcacao']">
+          <i class="fa-solid fa-circle-plus"></i>
+          <span>Nova marcação</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="desktop-group">
+      <div class="desktop-title-item">
+        <i class="fa-solid fa-dog"></i>
+        <span>Animais</span>
+      </div>
+      <div class="desktop-actions">
+        <a class="desktop-action-item" [routerLink]="['/animais']">
+          <i class="fa-solid fa-list"></i>
+          <span>Listar animais</span>
+        </a>
+        <a class="desktop-action-item" [routerLink]="['/novo-animal']">
+          <i class="fa-solid fa-circle-plus"></i>
+          <span>Novo animal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="desktop-group">
+      <div class="desktop-title-item">
+        <i class="fa-solid fa-user"></i>
+        <span>Tutores</span>
+      </div>
+      <div class="desktop-actions">
+        <a class="desktop-action-item" [routerLink]="['/tutores']">
+          <i class="fa-solid fa-list"></i>
+          <span>Listar tutores</span>
+        </a>
+        <a class="desktop-action-item" [routerLink]="['/novo-tutor']">
+          <i class="fa-solid fa-circle-plus"></i>
+          <span>Novo tutor</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-view">
+
+  <div class="mobile-group">
+    <div class="mobile-title-item">
+      <i class="fa-solid fa-calendar"></i>
+      <span>Marcações</span>
+    </div>
+    <a class="mobile-action-item" [routerLink]="['/marcacoes']">
+      <i class="fa-solid fa-list"></i>
+      <span>Listar marcações</span>
+    </a>
+    <a class="mobile-action-item" [routerLink]="['/nova-marcacao']">
+      <i class="fa-solid fa-circle-plus"></i>
+      <span>Nova marcação</span>
+    </a>
+  </div>
+
+  <div class="mobile-group">
+    <div class="mobile-title-item">
+      <i class="fa-solid fa-dog"></i>
+      <span>Animais</span>
+    </div>
+    <a class="mobile-action-item" [routerLink]="['/animais']">
+      <i class="fa-solid fa-list"></i>
+      <span>Listar animais</span>
+    </a>
+    <a class="mobile-action-item" [routerLink]="['/novo-animal']">
+      <i class="fa-solid fa-circle-plus"></i>
+      <span>Novo animal</span>
+    </a>
+  </div>
+
+  <div class="mobile-group">
+    <div class="mobile-title-item">
+      <i class="fa-solid fa-user"></i>
+      <span>Tutores</span>
+    </div>
+    <a class="mobile-action-item" [routerLink]="['/tutores']">
+      <i class="fa-solid fa-list"></i>
+      <span>Listar tutores</span>
+    </a>
+    <a class="mobile-action-item" [routerLink]="['/novo-tutor']">
+      <i class="fa-solid fa-circle-plus"></i>
+      <span>Novo tutor</span>
+    </a>
+  </div>
+</div>

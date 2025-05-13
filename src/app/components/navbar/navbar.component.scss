@@ -1,0 +1,155 @@
+.navbar {
+  position: fixed;
+  background: radial-gradient(white, var(--fadedcolor));
+  font-size: 9pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  min-height: 96px;
+  z-index: 1030;
+}
+
+.logo-img {
+  height: 2.5vh;
+}
+
+.navbar .nav-link,
+.navbar .nav-link i {
+  color: var(--maincolor);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:hover i {
+  scale: 125%;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+/* Burger menu */
+.navbar-toggler {
+  .animated-toggler {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: var(--maincolor);
+      transition: all 0.5s ease;
+      transform-origin: center;
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .clivet-logo h1 i.fa-paw {
+    font-size: 0.2em !important;
+    margin-left: 16px;
+    margin-top: 24px;
+    vertical-align: middle;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 96px);
+    background-color: var(--fadedcolor);
+    z-index: 1000;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+  .navbar-nav {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav-link {
+    height: 100%;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+    i {
+      margin-bottom: 32px;
+      transform: scale(5) !important;
+      transition: none !important;
+
+      &:hover, &:focus {
+        transform: scale(5) !important;
+      }
+    }
+
+    &:hover {
+      i {
+        transform: scale(5) !important;
+      }
+    }
+    }
+
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .navbar {
+    & > .container-fluid {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .navbar-collapse {
+      flex-basis: auto !important;
+      flex-grow: 0 !important;
+    }
+
+    .navbar-nav {
+      gap: 2rem;
+      flex-wrap: nowrap;
+    }
+  }
+}
