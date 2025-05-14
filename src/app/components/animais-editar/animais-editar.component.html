@@ -1,9 +1,11 @@
 <app-navbar></app-navbar>
 <div class="container page-title">
-  <h2>Editar dados do animal</h2>
+  <h2>
+    Editar dados do animal
+  </h2>
 
+  <div class="form-container">
   <form [formGroup]="formularioAnimais" (ngSubmit)="handleSubmit()">
-    <br>
     <div class="mb-4">
       <label class="form-label" for="nome">Nome:</label>
       <input class="form-control" formControlName="nome" type="text" id="nome" />
@@ -83,4 +85,6 @@
         [disabled]="submitted && formularioAnimais.invalid"><i class="fa-solid fa-circle-check"></i> Actualizar</button>
     </div>
   </form>
+</div>
+
 </div>

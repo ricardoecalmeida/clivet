@@ -48,14 +48,14 @@
       @if ((submitted || formularioAnimais.controls['sexo'].touched) && formularioAnimais.controls['sexo'].errors) {
       <div>
         @if (formularioAnimais.controls['sexo'].errors['required']) {
-        <span>Insira o sexo (salvo seja!)</span>
+        <span>Insira o sexo</span>
         }
       </div>
       }
     </div>
     <div class="mb-4">
       <label class="form-label" for="dataNascimento">Data de nascimento:</label>
-      <input class="form-control" formControlName="dataNascimento" type="datetime-local" id="dataNascimento" />
+      <input class="form-control" formControlName="dataNascimento" type="date" id="dataNascimento" />
       @if ((submitted || formularioAnimais.controls['dataNascimento'].touched) &&
       formularioAnimais.controls['dataNascimento'].errors) {
       <div>

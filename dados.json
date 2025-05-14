@@ -1342,36 +1342,20 @@
       "dataHora": "2025-08-30T11:15:00",
       "realizada": false,
       "cancelada": false
-    },
-    {
-      "id": "m100",
-      "tipo": "Consulta geral",
-      "animalId": "a40",
-      "tutorId": "t26",
-      "dataHora": "2025-09-02T09:45:00",
-      "realizada": false,
-      "cancelada": false
     }
   ],
   "tutores": [
     {
       "id": "t1",
       "nome": "Carlos Ferreira",
-      "telemovel": "918234567",
-      "email": "carlos.ferreira@gmail.com",
-      "animais": [
-        "a1",
-        "a2"
-      ]
+      "telemovel": "918234561",
+      "email": "carlos.ferreira@gmail.com"
     },
     {
       "id": "t2",
       "nome": "Sofia Costa",
       "telemovel": "926345678",
-      "email": "sofia.costa@outlook.com",
-      "animais": [
-        "a3"
-      ]
+      "email": "sofia.costa@outlook"
     },
     {
       "id": "t3",

@@ -19,16 +19,22 @@ body {
   padding-top: 8vh;
 }
 
-/* ========== CONTAINER ========== */
+/* ========== CONTAINERS ========== */
 .container-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 250px;
+}
+
+.form-container {
+  margin: auto;
+  max-width: 600px;
+  padding-top: 8vh;
 }
 
 /* ========== TEXT ========== */
-
 p {
   color: var(--maincolor);
 }
@@ -56,7 +62,6 @@ h2 {
 }
 
 /* ========== HOME ========== */
-
 .illustration {
   margin-top: 4rem;
   width: 100%;
@@ -92,7 +97,6 @@ li {
 }
 
 /* Buttons */
-
 .edit-btn {
   color: var(--edit-yellow)!important;
 }

@@ -1,9 +1,11 @@
 <app-navbar></app-navbar>
 <div class="container page-title">
-  <h2>Editar dados do tutor</h2>
+  <h2>
+    Editar dados do tutor
+  </h2>
 
+    <div class="form-container">
   <form [formGroup]="formularioTutores" (ngSubmit)="handleSubmit()">
-    <br>
     <div class="mb-4">
       <label class="form-label" for="nome">Nome:</label>
       <input class="form-control" formControlName="nome" type="text" id="nome" />
@@ -47,4 +49,6 @@
         [disabled]="submitted && formularioTutores.invalid"><i class="fa-solid fa-circle-check"></i> Actualizar</button>
     </div>
   </form>
+  </div>
+
 </div>

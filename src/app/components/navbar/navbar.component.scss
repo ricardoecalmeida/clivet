@@ -4,7 +4,7 @@
   font-size: 9pt;
   font-weight: 600;
   text-transform: uppercase;
-  min-height: 96px;
+  min-height: 7vh;
   z-index: 1030;
 }
 
@@ -26,6 +26,12 @@
 
 /* Burger menu */
 .navbar-toggler {
+    border: none !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+
   .animated-toggler {
     display: flex;
     flex-direction: column;
@@ -57,12 +63,8 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-
-  .clivet-logo h1 i.fa-paw {
-    font-size: 0.2em !important;
-    margin-left: 16px;
-    margin-top: 24px;
-    vertical-align: middle;
+  .navbar {
+     background: radial-gradient(var(--fadedcolor), var(--fadedcolor));
   }
 
   .navbar-collapse {
@@ -113,17 +115,17 @@
 
     i {
       margin-bottom: 32px;
-      transform: scale(5) !important;
+      transform: scale(2) !important;
       transition: none !important;
 
       &:hover, &:focus {
-        transform: scale(5) !important;
+        transform: scale(3) !important;
       }
     }
 
     &:hover {
       i {
-        transform: scale(5) !important;
+        transform: scale(3) !important;
       }
     }
     }
